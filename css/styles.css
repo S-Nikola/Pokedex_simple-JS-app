@@ -3,7 +3,6 @@
     --secondary-color:#FB1B1B;
   }
 
-
 body {
     font-family: "Lato", sans-serif;  
     font-weight: 400;
@@ -29,6 +28,7 @@ h1 {
     display: inline-block;
     border-radius: 36px;
   }
+
 p {
   box-sizing: border-box;
   background-color: var(--secondary-color);
