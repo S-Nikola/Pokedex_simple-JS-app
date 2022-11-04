@@ -1,14 +1,41 @@
-let pokemonList = [
-    {name: 'Bulbasaur', height: '70'},
-    {name: 'Charmander', height: '60'},
-    {name: 'Hitmonlee', height: '150'}
-];
+  let pokemonRepository = (function () {
 
-// Writes the list of pokemons to the DOM and singles out the large pokemon with a comment next to their height.
-for (let i = 0; i < pokemonList.length; i++) {
-  if(pokemonList[i].height > 100) {
-    document.write('<p class="jscript">' + pokemonList[i].name + '\'s  ' + 'height: ' + pokemonList[i].height + ' cm. ' + 'Wow, this one is huge!' + '</p>' + '<br>');
-  } else {
-    document.write('<p class="jscript">' + pokemonList[i].name + '\'s  ' + 'height: ' + pokemonList[i].height + ' cm.' + '</p>' + '<br>');
+    let pokemonList = [];
+  
+    function add (pokemon) {
+      if (typeof pokemon === 'object' && pokemon.name && pokemon.height && pokemon.type && Object.keys(pokemon).length === 3) {
+        pokemonList.push(pokemon);
+      } else {
+        return `${pokemon} is not a Pokémon. Information missing`;
+      }
     }
+  
+    function getAll () {
+      return pokemonList
+    }
+  
+    return {
+      add: add,
+      getAll: getAll
+  
+    };
+  
+  }) ();
+  
+  pokemonRepository.add({ name: 'Bulbasaur', height: 60, type:'Grass' });
+  pokemonRepository.add({ name: 'Charmander', height: 70, type:'Fire'});
+  pokemonRepository.add({ name: 'Hitmonlee', height: 120, type:'Fighting'});
+  pokemonRepository.add({ name: 'Pikachu', height: 30, type:'Electric'});
+  
+  let pokemonList = pokemonRepository.getAll();
+  
+  
+  //forEach() function that prints the pokemons to the DOM and highlights the large pokemon with a comment next to their height.
+  pokemonList.forEach(printInfo);
+  function printInfo (pokemon) {
+    let highlight = '';
+    if (pokemon.height > 100) {
+      highlight = " Wow, this one is big!";
+    }
+    document.write(`<p>${pokemon.name} (height: ${pokemon.height} cm.) ${highlight}</p> <br>`);
   }
