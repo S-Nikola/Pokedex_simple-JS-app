@@ -1,41 +1,69 @@
-  let pokemonRepository = (function () {
+//IIFE
+let pokemonRepository = (function () {
 
-    let pokemonList = [];
+  //An empty array, for pokemons to be included in.
+  let pokemonList = [];
   
-    function add (pokemon) {
-      if (typeof pokemon === 'object' && pokemon.name && pokemon.height && pokemon.type && Object.keys(pokemon).length === 3) {
-        pokemonList.push(pokemon);
+  //Required information for a pokemon entry
+  function add(pokemon){
+    if (typeof pokemon === 'object' 
+    && pokemon.name 
+    && pokemon.height 
+    && pokemon.type 
+    && Object.keys(pokemon).length === 3) {
+      pokemonList.push(pokemon);
       } else {
-        return `${pokemon} is not a Pokémon. Information missing`;
-      }
+      return `${pokemon} is not a Pokémon. Information missing`;
     }
-  
-    function getAll () {
-      return pokemonList
-    }
-  
-    return {
-      add: add,
-      getAll: getAll
-  
+  }
+    
+  function getAll () {
+    return pokemonList
+  }
+
+  //Creating a pokemon list
+  function addListItem(pokemon){
+    let pokemonList = document.querySelector(".pokemon-list");
+    let itemPokemonList = document.createElement("li");
+
+    //Creating a button
+    let button = document.createElement("button");
+    button.innerText = pokemon.name;
+    button.classList.add("pokemon-button");
+
+    //Appending what is created
+    itemPokemonList.appendChild(button);
+    pokemonList.appendChild(itemPokemonList);
+
+    //event listener
+    button.addEventListener('click', function(event) {
+      showDetails(pokemon)
+    })
+
+  }
+
+  function showDetails(pokemon){
+    console.log(pokemon)
+  }
+
+  return {
+    add: add,
+    getAll: getAll,
+    addListItem: addListItem
     };
   
-  }) ();
+}) ();
   
-  pokemonRepository.add({ name: 'Bulbasaur', height: 60, type:'Grass' });
-  pokemonRepository.add({ name: 'Charmander', height: 70, type:'Fire'});
-  pokemonRepository.add({ name: 'Hitmonlee', height: 120, type:'Fighting'});
-  pokemonRepository.add({ name: 'Pikachu', height: 30, type:'Electric'});
+//Ading pokemons to the list
+pokemonRepository.add({ name: 'Bulbasaur', height: 60, type:'Grass' });
+pokemonRepository.add({ name: 'Charmander', height: 70, type:'Fire'});
+pokemonRepository.add({ name: 'Hitmonlee', height: 120, type:'Fighting'});
+pokemonRepository.add({ name: 'Pikachu', height: 30, type:'Electric'});
   
-  let pokemonList = pokemonRepository.getAll();
+let pokemonList = pokemonRepository.getAll();
+
+//Looping 
+pokemonRepository.getAll().forEach(function (pokemon) {
+  pokemonRepository.addListItem(pokemon);
+});
   
-  
-  //forEach() function that prints the pokemons to the DOM and highlights the large pokemon with a comment next to their height.
-  pokemonList.forEach(printInfo);
-  function printInfo (pokemon) {
-    let highlight = '';
-    if (pokemon.height > 100) {
-      highlight = " Wow, this one is big!";
-    }
-    document.write(`<p>${pokemon.name} (height: ${pokemon.height} cm.) ${highlight}</p> <br>`);
-  }

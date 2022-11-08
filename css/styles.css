@@ -12,6 +12,7 @@ body {
     background-color: var(--primary-color);
   }
 
+  /* Styling elements created in the HTML */
 header{
     padding: 10px;
     text-align: left;
@@ -28,8 +29,13 @@ h1 {
     display: inline-block;
     border-radius: 36px;
   }
+.pokemon-list {
+  list-style-type: none;
+  padding: 10px;
+}
 
-p {
+/* Styling elements created in JS */
+.pokemon-button {
   box-sizing: border-box;
   background-color: var(--secondary-color);
   color: white;
@@ -37,7 +43,6 @@ p {
   padding: 6px 12px;
   display: inline-block;
   border-radius: 36px;
-  margin-bottom: 0;
-  margin-left: 10px;
+  margin: 5px;
 }
 
