@@ -51,8 +51,9 @@ justify-items: center;
   height: 250px;
   font-size: 30px;
   font-weight: bolder;
-  background-color: var(--secondary-color);
-  color: white;
+  background: linear-gradient(var(--secondary-color) 50%, white 50%);
+  /* background-color: var(--secondary-color); */
+  color: black;
   border: 8px solid black;
   padding: 6px 12px;
   display: inline-block;
