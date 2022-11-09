@@ -15,7 +15,11 @@ body {
   /* Styling elements created in the HTML */
 header{
     padding: 10px;
-    text-align: left;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
   }
 
 h1 {
@@ -28,21 +32,46 @@ h1 {
     padding: 6px 12px;
     display: inline-block;
     border-radius: 36px;
+
   }
 .pokemon-list {
   list-style-type: none;
   padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+justify-items: center;
+
 }
 
 /* Styling elements created in JS */
 .pokemon-button {
   box-sizing: border-box;
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+  font-size: 30px;
+  font-weight: bolder;
   background-color: var(--secondary-color);
   color: white;
-  border: 2px solid black;
+  border: 8px solid black;
   padding: 6px 12px;
   display: inline-block;
-  border-radius: 36px;
+  border-radius: 150px;
   margin: 5px;
+}
+.pokemon-button:hover, .pokemon-button:focus {
+  cursor: pointer;
+  opacity: 0.8;
+  }
+
+@media all and (max-width: 550px) {
+  .pokemon-list {
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 550px) and (max-width: 1050px){
+  .pokemon-list {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
