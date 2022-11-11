@@ -8,7 +8,7 @@ let pokemonRepository = (function () {
   function add(pokemon) {
     if (typeof pokemon === 'object' &&
       "name" in pokemon
-      // && "detailsUrl" in pokemon
+       //&& "detailsUrl" in pokemon
       // && "height" in pokemon
       // && "type" in pokemon 
     ) {
@@ -89,20 +89,25 @@ let pokemonRepository = (function () {
     
     let modal = document.createElement('div');
      modal.classList.add('modal');
+
+    //  let closeButtonElement = document.createElement ('button');
+    //  closeButtonElement.classList.add('modal-close');
+    //  closeButtonElement.innerText = 'Close';
+    //  closeButtonElement.addEventListener('click', hideModal);
     
     let title = document.createElement('h1');
      title.innerText = pokemon.name;
     
-     let pokemonImage = document.createElement('img');
+    let pokemonImage = document.createElement('img');
      pokemonImage.src = pokemon.imageUrl;
     
-     let pokemonHeight = document.createElement('p');
+    let pokemonHeight = document.createElement('p');
      pokemonHeight.innerText = "Height: " + pokemon.height;
     
-     let pokemonType = document.createElement('p');
+    let pokemonType = document.createElement('p');
      pokemonType.innerText = "Type: " + pokemon.type;
     
-    
+    //  modal.appendChild(closeButtonElement);
      modal.appendChild(title);
      modal.appendChild(pokemonImage);
      modal.appendChild(pokemonHeight);
