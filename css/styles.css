@@ -39,8 +39,7 @@ h1 {
   padding: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-justify-items: center;
-
+  justify-items: center;
 }
 
 /* Styling elements created in JS */
@@ -60,6 +59,7 @@ justify-items: center;
   border-radius: 150px;
   margin: 5px;
 }
+
 .pokemon-button:hover, .pokemon-button:focus {
   cursor: pointer;
   opacity: 0.8;
