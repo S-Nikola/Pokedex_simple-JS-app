@@ -44,10 +44,8 @@ let pokemonRepository = (function () {
 
   }
 
-  // function showDetails(pokemon) {
-  //   console.log(pokemon)
-  // }
 
+// Fetching and loading the data
   function loadList() {
     return fetch(apiUrl).then(function (response) {
       return response.json();
@@ -72,12 +70,15 @@ let pokemonRepository = (function () {
       // Now we add the details to the item
       item.imageUrl = details.sprites.front_default;
       item.height = details.height;
-      item.types = details.types;
+      item.type = details.types.map(function (item) {
+          return item.type.name;
+        });
     }).catch(function (e) {
       console.error(e);
     });
   }
 
+// Function that enables the showing of details on click
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function () {
       showModal(pokemon);

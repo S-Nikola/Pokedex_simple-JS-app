@@ -59,6 +59,9 @@ h1 {
   border-radius: 150px;
   margin: 5px;
 }
+.pokemon-button:first-letter {
+  text-transform: uppercase;
+}
 
 .pokemon-button:hover, .pokemon-button:focus {
   cursor: pointer;
@@ -109,6 +112,9 @@ h1 {
 .modal h1 {
   margin-top: 0;
 }
+.modal h1:first-letter {
+  text-transform: uppercase;
+}
  
 .modal p {
   margin-bottom: 0;
@@ -116,6 +122,10 @@ h1 {
  
 .modal-container {
   display: none;
+}
+.modal img {
+  display: flex;
+  align-self: center;
 }
  
 .modal-container.is-visible {
