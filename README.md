@@ -2,6 +2,7 @@
 https://s-nikola.github.io/simple-js-app/
 
 Pokédex
+
 This project is a small Pokédex app that display a list of 150 Pokémons:
 
 - Loads data from Pokémon API.
