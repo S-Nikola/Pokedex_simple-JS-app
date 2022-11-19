@@ -1,4 +1,60 @@
 :root {
+  --primary-color: #DFDFDF;
+  --secondary-color:#FB1B1B;
+}
+
+body {
+  font-family: "Lato", sans-serif;  
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: black;
+  background-color: var(--primary-color);
+}
+
+.list {
+  margin-top: 50px;
+}
+
+.card {
+  position: relative;
+  display:inline-flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: var(--primary-color);
+  color: var(--light-grey);
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 10px;
+  align-items: center;
+  align-content: center;
+  padding: 15px;
+  margin: 45px;
+}
+.card-body {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(var(--secondary-color) 50%, white 50%);
+  border-radius: 100%;
+  border: 2px solid black;
+}
+.card-title {
+  padding: 100px;
+}
+#card-title h5:first-letter {
+  text-transform: uppercase;
+}
+
+#pokemon-button{
+  height: 80%;
+  width: 80%;
+  border-radius: 60%;
+
+}
+
+/*:root {
     --primary-color: #DFDFDF;
     --secondary-color:#FB1B1B;
   }
@@ -12,7 +68,7 @@ body {
     background-color: var(--primary-color);
   }
 
-  /* Styling elements created in the HTML */
+  // Styling elements created in the HTML 
 header{
     padding: 10px;
     text-align: center;
@@ -42,7 +98,7 @@ h1 {
   justify-items: center;
 }
 
-/* Styling elements created in JS */
+// Styling elements created in JS
 .pokemon-button {
   box-sizing: border-box;
   display: inline-block;
@@ -51,7 +107,7 @@ h1 {
   font-size: 30px;
   font-weight: bolder;
   background: linear-gradient(var(--secondary-color) 50%, white 50%);
-  /* background-color: var(--secondary-color); */
+  // background-color: var(--secondary-color);
   color: black;
   border: 8px solid black;
   padding: 6px 12px;
@@ -78,13 +134,13 @@ h1 {
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
     
-  /* to show it above other content */
+  // to show it above other content
   z-index: 999; 
    
-  /* to allow scrolling if the screen is not high enough*/
+  // to allow scrolling if the screen is not high enough
   overflow: auto; 
   
-  /* this is used to center the modal */
+  // this is used to center the modal
   display: grid;
   text-align: center;
 }  
@@ -129,7 +185,7 @@ h1 {
 }
  
 .modal-container.is-visible {
-  /* CSS for modal container - add your own desired CSS styles here */
+  // CSS for modal container - add your own desired CSS styles here
   display: block;
 }
 
@@ -158,4 +214,4 @@ h1 {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 }
-
+*/
