@@ -28,7 +28,7 @@ body {
   word-wrap: break-word;
   background-color: var(--primary-color);
   background-clip: border-box;
-  border: 2px solid rgba(0, 0, 0, 0.125);
+  border: 2px solid var(--secondary-color);
   border-radius: 10px;
   align-items: center;
   align-content: center;
