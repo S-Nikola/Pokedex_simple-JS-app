@@ -1,0 +1,105 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+body {
+    font-family: "Lato", sans-serif;  
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    color: black;
+    background-color: #D3ECA7;
+  }
+  
+  .list {
+    margin-top: 130px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  
+  .navbar{
+    background-color: #19282F;
+  }
+  
+  #nav-title{
+    color: #B33030;
+    font-weight: bolder;
+    margin: 5px;
+  }
+  
+  .card {
+    position: relative;
+    display:-webkit-inline-box;
+    display:-ms-inline-flexbox;
+    display:inline-flex;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #A1B57D;
+    background-clip: border-box;
+    border: 2px solid #B33030;
+    border-radius: 30px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    padding: 15px;
+    margin: 45px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .card-body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #B33030), color-stop(50%, white));
+    background: -o-linear-gradient(#B33030 50%, white 50%);
+    background: linear-gradient(#B33030 50%, white 50%);
+    border-radius: 100%;
+    border: 2px solid black;
+  }
+  .card-title {
+    padding: 10px;
+  }
+  .card-title h5:first-letter {
+    text-transform: uppercase;
+  }
+  .modal-title h1:first-letter {
+    text-transform: uppercase;
+  }
+  
+  #pokemon-button{
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    font-size: small;
+    padding: 6px;
+  }

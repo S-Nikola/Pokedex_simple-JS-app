@@ -68,7 +68,7 @@ let pokemonRepository = (function () {
       console.error(e);
     })
   }
-
+  
   function loadDetails(item) {
     let url = item.detailsUrl;
     return fetch(url).then(function (response) {
@@ -124,7 +124,6 @@ let pokemonRepository = (function () {
     modalBody.append(typesElement);
     modalBody.append(abilitiesElement);
  };
-
 
   return {
     add: add,

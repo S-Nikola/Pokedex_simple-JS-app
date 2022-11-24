@@ -1,22 +1,27 @@
-:root {
-  --primary-color: #DFDFDF;
-  --secondary-color:#FB1B1B;
-}
-
 body {
   font-family: "Lato", sans-serif;  
   font-weight: 400;
   font-size: 16px;
   line-height: 1.6;
   color: black;
-  background-color: var(--primary-color);
+  background-color: #D3ECA7;
 }
 
 .list {
-  margin-top: 50px;
+  margin-top: 130px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.navbar{
+  background-color: #19282F;
+}
+
+#nav-title{
+  color: #B33030;
+  font-weight: bolder;
+  margin: 5px;
 }
 
 .card {
@@ -26,22 +31,27 @@ body {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: var(--primary-color);
+  background-color: #A1B57D;
   background-clip: border-box;
-  border: 2px solid var(--secondary-color);
-  border-radius: 10px;
+  border: 2px solid #B33030;
+  border-radius: 30px;
   align-items: center;
   align-content: center;
   padding: 15px;
   margin: 45px;
 }
+
+.hidden {
+  display: none;
+}
+
 .card-body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(var(--secondary-color) 50%, white 50%);
+  background: linear-gradient(#B33030 50%, white 50%);
   border-radius: 100%;
   border: 2px solid black;
 }
