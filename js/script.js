@@ -137,7 +137,6 @@ let pokemonRepository = (function () {
 
 })();
 //IIFE ends
-
 //Looping 
 pokemonRepository.loadList().then(function () {
   pokemonRepository.getAll().forEach(function (pokemon) {
