@@ -4,6 +4,7 @@ https://s-nikola.github.io/simple-js-app/
 Pokédex
 
 - Description:
+
 A small and simple web application made with HTML, CSS, and JS;
 Ioads data from an external API and enables the viewing of data (Pokemons) in detail;
 
