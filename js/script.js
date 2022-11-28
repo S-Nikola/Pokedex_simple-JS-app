@@ -61,7 +61,6 @@ let pokemonRepository = (function () {
           detailsUrl: item.url
         };
         add(pokemon);
-        // console.log(pokemon);
       });
     }).catch(function (e) {
       console.error(e);
@@ -131,13 +130,10 @@ function liveSearch() {
     let search_query = document.getElementById("search-bar").value;
 
     for (var i = 0; i < cards.length; i++) {
-      console.log('if', cards[i])
         if(cards[i].innerText.toLowerCase()
           .includes(search_query.toLowerCase())) {
-                  
           cards[i].classList.remove("is-hidden");
         } else {
-          console.log('else', cards[i])
           cards[i].classList.add("is-hidden"); 
         }
     }
