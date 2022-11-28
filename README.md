@@ -1,5 +1,5 @@
-# simple-js-app
-https://s-nikola.github.io/simple-js-app/
+# Pokedex_simple-js-app
+https://s-nikola.github.io/Pokedex_simple-JS-app/
 
 Pokédex
 
