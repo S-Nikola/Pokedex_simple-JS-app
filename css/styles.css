@@ -41,9 +41,7 @@ body {
   margin: 45px;
 }
 
-.hidden {
-  display: none;
-}
+.is-hidden { display: none; }
 
 .card-body {
   display: flex;
@@ -69,6 +67,6 @@ body {
   height: 60px;
   width: 60px;
   border-radius: 100%;
-  font-size: small;
+  font-size: smaller;
   padding: 6px;
 }

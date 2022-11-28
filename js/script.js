@@ -29,7 +29,6 @@ let pokemonRepository = (function () {
     let cardImage = $('<img class="card-img-top" alt="Card image" style="width:40%"/>');
     cardImage.attr("src", pokemon.imageUrlFront);
     let cardTitle = $('<h5 class="card-title; text-uppercase">' + pokemon.name + '</h5>');
-    cardTitle.innerText = pokemon.name;
     let cardBody = $('<div class="card-body" style= height:60%"></div>');
     let detailsButton = $('<button type="button" id="pokemon-button" class="btn btn-dark" data-toggle="modal" data-target="#pokemonModal">Details</button>');
     
@@ -62,7 +61,7 @@ let pokemonRepository = (function () {
           detailsUrl: item.url
         };
         add(pokemon);
-        console.log(pokemon);
+        // console.log(pokemon);
       });
     }).catch(function (e) {
       console.error(e);
@@ -125,6 +124,31 @@ let pokemonRepository = (function () {
     modalBody.append(abilitiesElement);
  };
 
+//Search/filter bar
+    
+function liveSearch() {
+    let cards = document.querySelectorAll('.card');
+    let search_query = document.getElementById("search-bar").value;
+
+    for (var i = 0; i < cards.length; i++) {
+      console.log('if', cards[i])
+        if(cards[i].innerText.toLowerCase()
+          .includes(search_query.toLowerCase())) {
+                  
+          cards[i].classList.remove("is-hidden");
+        } else {
+          console.log('else', cards[i])
+          cards[i].classList.add("is-hidden"); 
+        }
+    }
+}
+ 
+let searchInput = document.getElementById('search-bar');
+
+searchInput.addEventListener('keyup', () => {
+  liveSearch();
+});
+
   return {
     add: add,
     getAll: getAll,
@@ -133,10 +157,11 @@ let pokemonRepository = (function () {
     loadDetails: loadDetails,
     showDetails: showDetails,
     showModal: showModal,
-  };
+  };  
 
 })();
 //IIFE ends
+
 //Looping 
 pokemonRepository.loadList().then(function () {
   pokemonRepository.getAll().forEach(function (pokemon) {
