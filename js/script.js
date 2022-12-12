@@ -79,11 +79,11 @@ let pokemonRepository = (function () {
       item.types = details.types.map(function (item) {
           return item.type.name;
         });
-        item.abilities = [];
+      item.abilities = [];
         for (var i = 0; i < details.abilities.length; i++) {
           item.abilities.push(details.abilities[i].ability.name);
         }
-        item.weight = details.weight;
+      item.weight = details.weight;
       })
     .catch(function (e) {
       console.error(e);
